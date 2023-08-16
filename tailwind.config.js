@@ -13,6 +13,7 @@ export default {
         'neo-light-grey': 'rgb(200, 204, 216)',
         'neo-very-light-grey': 'rgb(238, 239, 244)',
         'neo-error-red': 'rgb(223, 86, 86)',
+        'neo-gradient-black': 'rgb(0, 0, 0, .5)',
       },
       fontFamily: {
         'spartan': 'League Spartan',
