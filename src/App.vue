@@ -63,10 +63,10 @@ export default {
         <img class=" h-6" :src="logoWhite" alt="logoWhite">
       </div>
       <div class=" flex flex-col TB:flex-row TB:justify-between items-center gap-8 TB:w-[313px]">
-        <button v-for="item in navData"
+        <RouterLink v-for="item in navData" :to="item.link"
           class=" text-neo-medium-grey hover:text-neo-very-dark-blue text-[1.125rem] leading-[1.5625rem] font-bold">
           {{ item.main }}
-        </button>
+        </RouterLink>
       </div>
       <ButtonManager btn-text="See Our Portfolio" />
       <!-- Footer Background Color -->

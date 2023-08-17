@@ -37,13 +37,19 @@ export default {
 }
 </script>
 <template>
-   <div :class="` absolute w-full h-[240px] ${store.joinArr(data[dataIndex].bg)} bg-cover bg-center`">
-   </div>
-   <div class=" absolute w-full h-[310px] text-white">
-      <h1 class=" text-[3rem] leading-[3.25rem] tracking-[-.075rem] font-bold">
-         {{ data[dataIndex].header }}</h1>
-      <p class=" text-[1.125rem] leading-[1.5rem] font-medium">
-         {{ data[dataIndex].main }}
-      </p>
-   </div>
+   <section class=" relative h-[529px] TB:h-[720px] TB:mx-24">
+      <div :class="` absolute w-full h-[240px] TB:h-full ${store.joinArr(data[dataIndex].bg)} bg-cover bg-center`">
+         <div class=" absolute w-full h-full bg-black bg-opacity-[.35]"></div>
+      </div>
+      <div
+         class=" absolute bottom-0 TB:right-0 flex flex-col w-[91.5%] bg-white pl-8 TB:pl-[3.625rem] pt-16 TB:pt-[5.5rem]">
+         <div class=" hidden TB:block w-16 h-px bg-neo-light-grey mb-[4.5rem]"></div>
+         <h1
+            class=" mb-5 TB:mb-[2.375rem] text-[3rem] TB:text-[4.5rem] leading-[3.25rem] TB:leading-[4rem] tracking-[-.075rem] font-bold">
+            {{ data[dataIndex].header }}</h1>
+         <p class=" text-neo-dark-grey text-[1.125rem] leading-[1.5rem] font-medium">
+            {{ data[dataIndex].main }}
+         </p>
+      </div>
+   </section>
 </template>
