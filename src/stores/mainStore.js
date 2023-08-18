@@ -171,13 +171,13 @@ export const useMainStore = defineStore('main', () => {
   function joinArr(arr) {
     return arr.join(' ')
   }
-  function increment() {
-    slideCount.value++
-    if (slideCount.value >= bgSlides.length) slideCount.value = 0
-  }
-  function decrement() {
-    slideCount.value--
-    if (slideCount.value < 0) slideCount.value = bgSlides.length - 1
-  }
-  return { slideCount, bgSlides, gallery, joinArr, increment, decrement }
+  // function increment() {
+  //   slideCount.value++
+  //   if (slideCount.value >= bgSlides.length) slideCount.value = 0
+  // }
+  // function decrement() {
+  //   slideCount.value--
+  //   if (slideCount.value < 0) slideCount.value = bgSlides.length - 1
+  // }
+  return { slideCount, bgSlides, gallery, joinArr }
 })

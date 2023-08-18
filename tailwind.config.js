@@ -21,6 +21,7 @@ export default {
       screens: {
         'TB': '768px',
         'DT': '1440px',
+        'DTL': '1800px',
       }
     },
   },
