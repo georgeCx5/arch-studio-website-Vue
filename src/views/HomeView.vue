@@ -89,26 +89,28 @@ function getActiveSlide(num) {
                      <p class=" DT:w-[60%] mb-[5.25rem] TB:mb-10 text-[1.125rem] leading-[1.5rem] font-medium">
                         {{ item.main }}
                      </p>
-                     <ButtonManager btn-text="See Our Portfolio" />
+                     <RouterLink to="/portfolio">
+                        <ButtonManager btn-text="See Our Portfolio" />
+                     </RouterLink>
                   </div>
                </div>
             </Transition>
          </div>
-         <div class=" absolute bottom-0 -left-20 hidden DT:flex">
+         <div class=" absolute bottom-0 -left-20 hidden DT:flex select-none">
             <button v-for="(item, index) in dataSlides" @click="store.slideCount = index"
-               :class="` flex justify-center items-center w-20 h-20 ${getActiveSlide(index)} text-[1.125rem] leading-[1.5625rem] font-bold`">
+               :class="` flex justify-center items-center w-20 h-20 ${getActiveSlide(index)} hover:bg-neo-very-light-grey text-[1.125rem] leading-[1.5625rem] font-bold`">
                0{{ item.id }}
             </button>
          </div>
       </section>
       <!-- Two -->
       <section
-         class=" relative DT:flex flex-row-reverse items-end gap-[7.75rem] px-8 TB:px-0 pt-[4.5rem] TB:pt-[15.5rem] DT:pt-[12.25rem] pb-[7rem] TB:pb-[14.625rem] DT:pb-[12.5rem]">
+         class=" relative DT:flex flex-row-reverse items-end gap-[7.75rem] DTL:gap-[15rem] px-8 TB:px-0 pt-[4.5rem] TB:pt-[15.5rem] DT:pt-[12.25rem] pb-[7rem] TB:pb-[14.625rem] DT:pb-[12.5rem]">
          <h2
             class=" absolute left-0 top-[5.75rem] DT:top-[7rem] hidden TB:block text-neo-very-light-grey text-[9rem] DT:text-[15.5rem] leading-[12.5rem] tracking-[-.1875rem] DT:tracking-[-.3125rem] font-bold">
             Welcome</h2>
          <div class=" w-16 h-px TB:hidden bg-neo-light-grey mb-[4.25rem]"></div>
-         <div :class="` hidden DT:block w-[31.5%] h-[568px] ${sectionTwoBg} bg-cover bg-center`"></div>
+         <div :class="` hidden DT:block w-[31.5%] h-[568px] DTL:h-[640px] ${sectionTwoBg} bg-cover bg-center`"></div>
          <div class=" relative DT:w-[40%] DT:pb-3">
             <h1
                class=" flex flex-col mb-[1.375rem] TB:mb-11 text-[3rem] TB:text-[4.5rem] leading-[3.25rem] TB:leading-[4rem] tracking-[-.10625rem] TB:tracking-[-.1875rem] font-bold">
@@ -128,13 +130,15 @@ function getActiveSlide(num) {
          </div>
       </section>
       <!-- Three -->
-      <section :class="` relative h-[560px] ${store.joinArr(sectionThreeBg)} bg-cover bg-center`">
+      <section :class="` relative h-[560px] DTL:h-[640px] ${store.joinArr(sectionThreeBg)} bg-cover bg-center`">
          <div
-            :class="` relative flex flex-col justify-center gap-6 DT:gap-8 h-full px-8 TB:px-[3.625rem] DT:px-[11.5rem] z-10`">
+            :class="` relative flex flex-col justify-center gap-6 DT:gap-8 DTL:gap-12 h-full px-8 TB:px-[3.625rem] DT:px-[11.5rem] z-10`">
             <h1
                class=" flex flex-col text-white text-[3rem] TB:text-[4.5rem] leading-[3.25rem] TB:leading-[4rem] tracking-[-.10625rem] font-bold">
                Small team, <span>big ideas</span></h1>
-            <ButtonManager btn-text="About Us" w-size="w-[187px]" />
+            <RouterLink to="/about">
+               <ButtonManager btn-text="About Us" w-size="w-[187px]" />
+            </RouterLink>
          </div>
          <div class=" absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
       </section>
@@ -144,11 +148,13 @@ function getActiveSlide(num) {
             <h1
                class=" text-[3rem] TB:text-[4.5rem] leading-[3.25rem] TB:leading-[4rem] tracking-[-.1075rem] TB:tracking-[-.125rem] font-bold">
                Featured</h1>
-            <ButtonManager btn-text="See All" w-size="w-[169px]" class=" hidden TB:flex" />
+            <RouterLink to="/portfolio">
+               <ButtonManager btn-text="See All" w-size="w-[169px]" class=" hidden TB:flex" />
+            </RouterLink>
          </div>
          <div class=" flex flex-col DT:flex-row gap-6 DT:gap-[1.875rem] text-white">
             <article v-for="item in dataFeatured"
-               :class="` relative DT:w-full h-[240px] DT:h-[560px] ${item.bg} bg-cover bg-center`">
+               :class="` relative DT:w-full h-[240px] DT:h-[560px] DTL:h-[640px] ${item.bg} bg-cover bg-center`">
                <div class=" relative flex flex-col justify-end h-full p-6 TB:p-10 z-10">
                   <div
                      class=" absolute top-[1.875rem] right-4 DT:-right-[.625rem] text-white text-opacity-50 text-[15.5rem] leading-[12.5rem] tracking-[-.3125rem] font-bold">
@@ -161,7 +167,9 @@ function getActiveSlide(num) {
                <div class=" absolute left-0 top-0 w-full h-full bg-gradient-to-b from-transparent to-neo-gradient-black">
                </div>
             </article>
-            <ButtonManager btn-text="See all" w-size="w-full" class=" TB:hidden" />
+            <RouterLink to="/portfolio">
+               <ButtonManager btn-text="See all" w-size="w-full" class=" TB:hidden" />
+            </RouterLink>
          </div>
       </section>
    </main>

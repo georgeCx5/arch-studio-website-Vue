@@ -18,7 +18,13 @@ export default {
                address: ' 3399 Wines Lane TX',
                phone: ' 832-123-4321',
             },
-         ]
+         ],
+         isHovered: false,
+      }
+   },
+   computed: {
+      getHoverState() {
+         return this.isHovered ? 'underline' : ''
       }
    },
    props: {
@@ -43,8 +49,9 @@ export default {
             Phone:{{ data[dataIndex].phone }}
          </p>
       </div>
-      <button class=" flex justify-between items-center w-[151px] h-[25px] TB:pb-4 DT:pb-0">
-         <h4 class=" text-[1.125rem] leading-[1.5625rem] font-bold">
+      <button @mouseenter="isHovered = true" @mouseleave="isHovered = false"
+         class=" flex justify-between items-center w-[151px] h-[25px] TB:pb-4 DT:pb-0 select-none">
+         <h4 :class="` text-[1.125rem] leading-[1.5625rem] font-bold ${getHoverState}`">
             View on Map</h4>
          <img class="h-[18px]" :src="arrow" alt="arrow">
       </button>

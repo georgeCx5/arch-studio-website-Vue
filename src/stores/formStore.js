@@ -5,15 +5,18 @@ export const useFormStore = defineStore('form', {
       dName: {
          val: '',
          valState: 'default',
+         isFocused: false,
       },
       dEmail: {
          rgxVal: new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/),
          val: '',
          valState: 'default',
+         isFocused: false,
       },
       dMessage: {
          val: '',
          valState: 'default',
+         isFocused: false,
       }
    }),
    actions: {
@@ -22,7 +25,7 @@ export const useFormStore = defineStore('form', {
             data.valState = 'empty'
             return
          }
-         if (Object.keys(data).length > 2) {
+         if (Object.keys(data).length > 3) {
             if (data.rgxVal.test(data.val)) {
                data.valState = 'success'
                return

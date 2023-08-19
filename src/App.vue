@@ -62,7 +62,7 @@ export default {
 <template>
   <body class=" flex flex-col items-center text-neo-very-dark-blue font-spartan">
     <nav
-      class=" relative flex justify-between TB:justify-start items-center TB:gap-20 DT:gap-24 DTL:gap-32 w-full max-w-[425px] TB:max-w-[1024px] DT:max-w-[1920px] p-8 TB:px-24 DT:px-[10.25rem] TB:py-14 z-50">
+      class=" relative flex justify-between TB:justify-start items-center TB:gap-20 DT:gap-24 DTL:gap-32 w-full max-w-[425px] TB:max-w-[1024px] DT:max-w-[1920px] p-8 TB:px-24 DT:px-[10.25rem] TB:py-14 select-none z-50">
       <!-- Side Route Name -->
       <div class=" absolute left-[3.5rem] DT:left-[5.75rem] top-0 rotate-90 hidden TB:block">
         <div v-for="item in routesData" v-show="item.routeName == $route.name"
@@ -102,7 +102,7 @@ export default {
     </nav>
     <RouterView />
     <footer
-      class=" relative flex flex-col TB:flex-row items-center gap-8 TB:gap-10 DT:gap-[5.25rem] DTL:gap-32 w-full max-w-[425px] TB:max-w-[1024px] DT:max-w-[1920px] DT:px-[10.25rem] pb-12 TB:pb-0">
+      class=" relative flex flex-col TB:flex-row items-center gap-8 TB:gap-10 DT:gap-[5.25rem] DTL:gap-32 w-full max-w-[425px] TB:max-w-[1024px] DT:max-w-[1920px] DT:px-[10.25rem] pb-12 TB:pb-0 select-none">
       <RouterLink to="/"
         class=" flex justify-center items-center w-[7.5rem] DT:w-[12.5rem] h-[7.5rem] DT:h-[12.5rem] bg-neo-very-dark-blue">
         <img class=" h-6 DT:h-10" :src="logoWhite" alt="logoWhite">
@@ -113,7 +113,9 @@ export default {
           {{ item.main }}
         </RouterLink>
       </div>
-      <ButtonManager btn-text="See Our Portfolio" class=" TB:absolute right-0 DT:right-[10.25rem]" />
+      <RouterLink to="/portfolio" class=" TB:absolute right-0 DT:right-[10.25rem]">
+        <ButtonManager btn-text="See Our Portfolio" />
+      </RouterLink>
       <!-- Footer Background Color -->
       <div class=" absolute top-0 TB:left-0 w-full h-full pt-[3.75rem] TB:pt-0 TB:pr-[10rem] DT:px-[18.25rem] -z-10">
         <div class=" w-full DT:w-auto h-full bg-neo-very-light-grey"></div>

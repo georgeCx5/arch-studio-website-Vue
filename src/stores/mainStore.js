@@ -55,6 +55,7 @@ export const useMainStore = defineStore('main', () => {
       ],
       header: 'Seraph Station',
       date: 'September 2019',
+      isHovered: false,
     },
     {
       id: 2,
@@ -65,6 +66,7 @@ export const useMainStore = defineStore('main', () => {
       ],
       header: 'Eebox Building',
       date: 'August 2017',
+      isHovered: false,
     },
     {
       id: 3,
@@ -75,6 +77,7 @@ export const useMainStore = defineStore('main', () => {
       ],
       header: 'Federal II Tower',
       date: 'March 2017',
+      isHovered: false,
     },
     {
       id: 4,
@@ -85,6 +88,7 @@ export const useMainStore = defineStore('main', () => {
       ],
       header: 'Project Del Sol',
       date: 'January 2016',
+      isHovered: false,
     },
     {
       id: 5,
@@ -95,6 +99,7 @@ export const useMainStore = defineStore('main', () => {
       ],
       header: 'Le Prototype',
       date: 'October 2015',
+      isHovered: false,
     },
     {
       id: 6,
@@ -105,6 +110,7 @@ export const useMainStore = defineStore('main', () => {
       ],
       header: '228B Tower',
       date: 'April 2015',
+      isHovered: false,
     },
     {
       id: 7,
@@ -115,6 +121,7 @@ export const useMainStore = defineStore('main', () => {
       ],
       header: 'Grand Edelweiss Hotel',
       date: 'December 2013',
+      isHovered: false,
     },
     {
       id: 8,
@@ -125,6 +132,7 @@ export const useMainStore = defineStore('main', () => {
       ],
       header: 'Netcry Tower',
       date: 'August 2012',
+      isHovered: false,
     },
     {
       id: 9,
@@ -135,6 +143,7 @@ export const useMainStore = defineStore('main', () => {
       ],
       header: 'Hypers',
       date: 'January 2012',
+      isHovered: false,
     },
     {
       id: 10,
@@ -145,6 +154,7 @@ export const useMainStore = defineStore('main', () => {
       ],
       header: 'SXIV Tower',
       date: 'March 2011',
+      isHovered: false,
     },
     {
       id: 11,
@@ -155,6 +165,7 @@ export const useMainStore = defineStore('main', () => {
       ],
       header: 'Trinity Bank Tower',
       date: 'September 2010',
+      isHovered: false,
     },
     {
       id: 12,
@@ -165,6 +176,7 @@ export const useMainStore = defineStore('main', () => {
       ],
       header: 'Project Paramour',
       date: 'February 2008',
+      isHovered: false,
     },
   ]
   function joinArr(arr) {
