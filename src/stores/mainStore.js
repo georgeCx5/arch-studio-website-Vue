@@ -167,17 +167,8 @@ export const useMainStore = defineStore('main', () => {
       date: 'February 2008',
     },
   ]
-  // const doubleCount = computed(() => count.value * 2)
   function joinArr(arr) {
     return arr.join(' ')
   }
-  // function increment() {
-  //   slideCount.value++
-  //   if (slideCount.value >= bgSlides.length) slideCount.value = 0
-  // }
-  // function decrement() {
-  //   slideCount.value--
-  //   if (slideCount.value < 0) slideCount.value = bgSlides.length - 1
-  // }
   return { slideCount, bgSlides, gallery, joinArr }
 })

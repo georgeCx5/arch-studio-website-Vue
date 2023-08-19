@@ -94,7 +94,7 @@ function getActiveSlide(num) {
                </div>
             </Transition>
          </div>
-         <div class=" absolute bottom-0 flex">
+         <div class=" absolute bottom-0 -left-20 hidden DT:flex">
             <button v-for="(item, index) in dataSlides" @click="store.slideCount = index"
                :class="` flex justify-center items-center w-20 h-20 ${getActiveSlide(index)} text-[1.125rem] leading-[1.5625rem] font-bold`">
                0{{ item.id }}
